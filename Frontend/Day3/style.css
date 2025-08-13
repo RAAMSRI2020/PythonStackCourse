@@ -1,0 +1,30 @@
+/* Table Styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* Div Styling */
+.pizza-card {
+  background: #fff3e6;
+  border: 2px dashed #ff6b6b;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+}
+
+.special {
+  background: #ffeb3b;
+}

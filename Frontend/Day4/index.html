@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tony's Pizza - HTML Only</title>
+    <!-- No CSS allowed yet! -->
+</head>
+<body>
+    <!-- 1. Semantic Structure -->
+    <header>
+        <h1>Tony's Pizza</h1>
+        <nav>
+            <a href="#menu">Menu</a> |
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- 2. Tables -->
+    <section id="menu">
+        <h2>Our Pizzas</h2>
+        <table border="1">
+            <tr>
+                <th>Pizza</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Margherita</td>
+                <td>$10.99</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 3. Forms -->
+    <section id="order">
+        <form>
+            <fieldset>
+                <legend>Order Now</legend>
+                <input type="radio" id="delivery" name="method">
+                <label for="delivery">Delivery</label><br>
+                
+                <input list="toppings">
+                <datalist id="toppings">
+                    <option value="Cheese">
+                    <option value="Pepperoni">
+                    <option value="Mushrooms">
+                    <option value="Olives">
+                    <option value="Bell Peppers">
+                </datalist>
+                
+                <button type="submit">Order</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- 4. Multimedia -->
+    <section>
+        <h3>Watch Us Make Pizza!</h3>
+        <video controls width="300">
+            <source src="pizza-video.mp4" type="video/mp4">
+        </video>
+        <audio controls>
+            <source src="pizza-jingle.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <!-- 5. Misc Tags -->
+    <footer>
+        <address>123 Pizza St.</address>
+        <small>&copy; 2023</small>
+    </footer>
+</body>
+</html>
