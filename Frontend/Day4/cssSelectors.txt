@@ -1,0 +1,18 @@
+Selectors in CSS
+
+direct tags like h1....
+id     should be unique
+class  can be duplicate
+
+types of CSS
+inline 
+internal
+external
+
+
+basic styling 
+transitions
+box shadow
+gradient
+responsive design
+
