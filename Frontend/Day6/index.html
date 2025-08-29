@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="main-title">Hello World</h1>
+    <button onclick="changeText()">Click Me!</button>
+
+    <script>
+        function changeText() {
+            // Get element by ID
+            const title = document.getElementById('main-title');
+            
+            // Change text content
+            title.textContent = "Text Changed!";
+            
+            // Change style
+            title.style.color = "red";
+            title.style.fontSize = "2rem";
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <button id="my-btn">Hover over me!</button>
+    <p id="output">Event will show here</p>
+
+    <script>
+        const button = document.getElementById('my-btn');
+        const output = document.getElementById('output');
+
+        // Click event
+        button.addEventListener('click', function() {
+            output.textContent = "Button clicked!";
+        });
+
+        // Mouseover event
+        button.addEventListener('mouseover', function() {
+            output.textContent = "Mouse is over button!";
+        });
+
+        // Mouseout event
+        button.addEventListener('mouseout', function() {
+            output.textContent = "Mouse left button!";
+        });
+    </script>
+</body>
+</html>
+-->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="name-input" placeholder="Enter your name">
+    <p id="greeting">Hello, stranger!</p>
+
+    <script>
+        const input = document.getElementById('name-input');
+        const greeting = document.getElementById('greeting');
+
+        input.addEventListener('input', function() {
+            if (input.value.trim() === "") {
+                greeting.textContent = "Hello, stranger!";
+            } else {
+                greeting.textContent = `Hello, ${input.value}!`;
+            }
+        });
+    </script>
+</body>
+</html>
+-->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <button id="toggle-btn">Show/Hide Secret</button>
+    <p id="secret" style="display: none;">🎉 Surprise! You found the secret message!</p>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const secret = document.getElementById('secret');
+
+        toggleBtn.addEventListener('click', function() {
+            if (secret.style.display === "none") {
+                secret.style.display = "block";
+                toggleBtn.textContent = "Hide Secret";
+            } else {
+                secret.style.display = "none";
+                toggleBtn.textContent = "Show Secret";
+            }
+        });
+    </script>
+</body>
+</html>
+-->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="counter">0</h1>
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let count = 0;
+        const counter = document.getElementById('counter');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
+        const resetBtn = document.getElementById('reset');
+
+        function updateCounter() {
+            counter.textContent = count;
+            counter.style.color = count > 0 ? "green" : count < 0 ? "red" : "black";
+        }
+
+        incrementBtn.addEventListener('click', function() {
+            count++;
+            updateCounter();
+        });
+
+        decrementBtn.addEventListener('click', function() {
+            count--;
+            updateCounter();
+        });
+
+        resetBtn.addEventListener('click', function() {
+            count = 0;
+            updateCounter();
+        });
+    </script>
+</body>
+</html>
+-->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <button id="color-btn">Change Background</button>
+    <p>Click the button to change the background color!</p>
+
+    <script>
+        const colors = ["#ff6b6b", "#4ecdc4", "#45b7d1", "#f9ca24", "#6c5ce7"];
+        const button = document.getElementById('color-btn');
+        let currentColor = 0;
+
+        button.addEventListener('click', function() {
+            document.body.style.backgroundColor = colors[currentColor];
+            currentColor = (currentColor + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
+-->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="task-input" placeholder="Enter a task">
+    <button id="add-btn">Add Task</button>
+    <ul id="task-list"></ul>
+
+    <script>
+        const taskInput = document.getElementById('task-input');
+        const addBtn = document.getElementById('add-btn');
+        const taskList = document.getElementById('task-list');
+
+        addBtn.addEventListener('click', function() {
+            if (taskInput.value.trim() !== "") {
+                // Create new list item
+                const li = document.createElement('li');
+                li.textContent = taskInput.value;
+                
+                // Add click to remove functionality
+                li.addEventListener('click', function() {
+                    taskList.removeChild(li);
+                });
+                
+                // Add to list and clear input
+                taskList.appendChild(li);
+                taskInput.value = "";
+            }
+        });
+
+        // Allow adding tasks with Enter key
+        taskInput.addEventListener('keypress', function(e) {
+            if (e.key === "Enter") {
+                addBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
+-->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="outer" style="padding: 50px; background: lightblue;">
+        <div id="inner" style="padding: 30px; background: lightgreen;">
+            <button id="button" style="padding: 10px;">Click Me!</button>
+        </div>
+    </div>
+    <p id="output">Click anywhere and see the event bubble!</p>
+
+    <script>
+        const outer = document.getElementById('outer');
+        const inner = document.getElementById('inner');
+        const button = document.getElementById('button');
+        const output = document.getElementById('output');
+
+        function logEvent(event) {
+            output.textContent += ` → ${event.currentTarget.id}`;
+        }
+
+        outer.addEventListener('click', logEvent);
+        inner.addEventListener('click', logEvent);
+        button.addEventListener('click', function(event) {
+            logEvent(event);
+            // Try uncommenting the next line to stop bubbling:
+            // event.stopPropagation();
+        });
+    </script>
+</body>
+</html>
+-->
