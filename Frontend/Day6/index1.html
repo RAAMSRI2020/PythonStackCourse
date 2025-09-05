@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer" style="padding: 50px; background: lightblue;">
+        <div id="inner" style="padding: 30px; background: lightgreen;">
+            <button id="button" style="padding: 10px;">Click Me!</button>
+        </div>
+    </div>
+    <p id="output">Click anywhere and see the event bubble!</p>
+
+    <script>
+        const outer = document.getElementById('outer');
+        const inner = document.getElementById('inner');
+        const button = document.getElementById('button');
+        const output = document.getElementById('output');
+
+        function logEvent(event) {
+            output.textContent += ` → ${event.currentTarget.id}`;
+        }
+
+        outer.addEventListener('click', logEvent);
+        inner.addEventListener('click', logEvent);
+        button.addEventListener('click', function(event) {
+            logEvent(event);
+            // Try uncommenting the next line to stop bubbling:
+            // event.stopPropagation();
+        });
+    </script>
+</body>
+</html>
