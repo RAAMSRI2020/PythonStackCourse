@@ -3,7 +3,8 @@ const pizzaMenu = [
     { id: 1, name: "Margherita", description: "Tomato sauce, mozzarella, basil", price: 10.99, image: "🍕" },
     { id: 2, name: "Pepperoni", description: "Pepperoni, mozzarella, tomato sauce", price: 12.99, image: "🍕" },
     { id: 3, name: "Vegetarian", description: "Mixed vegetables, mozzarella", price: 11.99, image: "🍕" },
-    { id: 4, name: "Hawaiian", description: "Ham, pineapple, mozzarella", price: 13.99, image: "🍕" }
+    { id: 4, name: "Hawaiian", description: "Ham, pineapple, mozzarella", price: 13.99, image: "🍕" },
+    { id: 5, name: "Hawaiian", description: "Ham, pineapple, mozzarella", price: 13.99, image: "🍕" }
 ];
 
 // Current Order

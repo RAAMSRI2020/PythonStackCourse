@@ -1,0 +1,102 @@
+<!-- 
+<img id="slider" width="300" />
+<br />
+<button onclick="prev()">Prev</button>
+<button onclick="next()">Next</button>
+
+<script>
+const images = [
+  "https://picsum.photos/300/200?random=1",
+  "https://picsum.photos/300/200?random=2",
+  "https://picsum.photos/300/200?random=3"
+];
+let index = 0;
+
+const slider = document.getElementById("slider");
+slider.src = images[index];
+
+function next() {
+  index = (index + 1) % images.length;
+  slider.src = images[index];
+}
+
+function prev() {
+  index = (index - 1 + images.length) % images.length;
+  slider.src = images[index];
+}
+</script>
+ 
+
+-->
+
+
+<!-- 
+<button id="openBtn">Open Modal</button>
+
+<div id="modal" style="display:none; position:fixed; top:30%; left:30%; padding:20px; background:#fff; border:1px solid #333;">
+  <p>This is a modal!</p>
+  <button id="closeBtn">Close</button>
+</div>
+
+<script>
+const modal = document.getElementById("modal");
+document.getElementById("openBtn").onclick = () => modal.style.display = "block";
+document.getElementById("closeBtn").onclick = () => modal.style.display = "none";
+</script>
+
+-->
+
+
+<!-- 
+<div class="accordion">
+  <h3 class="title">Section 1</h3>
+  <p class="content" style="display:none;">Content for section 1</p>
+
+  <h3 class="title">Section 2</h3>
+  <p class="content" style="display:none;">Content for section 2</p>
+</div>
+
+<script>
+const titles = document.querySelectorAll(".title");
+
+titles.forEach(title => {
+  title.onclick = () => {
+    const content = title.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  };
+});
+</script>
+
+-->
+
+<!-- 
+<textarea id="msg" maxlength="50"></textarea>
+<p id="counter">50 characters left</p>
+
+<script>
+const msg = document.getElementById("msg");
+const counter = document.getElementById("counter");
+
+msg.addEventListener("input", () => {
+  const remaining = 50 - msg.value.length;
+  counter.textContent = `${remaining} characters left`;
+});
+</script>
+
+
+-->
+
+<!-- 
+<h2 id="clock"></h2>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  document.getElementById("clock").textContent =
+    now.toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+updateClock(); // run immediately
+</script>
+
+-->

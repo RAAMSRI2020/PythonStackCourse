@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<img id="slider" width="300" />
+<br />
+<button onclick="prev()">Prev</button>
+<button onclick="next()">Next</button>
+
+<script>
+const images = [
+  "https://picsum.photos/300/200?random=1",
+  "https://picsum.photos/300/200?random=2",
+  "https://picsum.photos/300/200?random=3"
+];
+let index = 0;
+
+const slider = document.getElementById("slider");
+slider.src = images[index];
+
+function next() {
+  index = (index + 1) % images.length;
+  slider.src = images[index];
+}
+
+function prev() {
+  index = (index - 1 + images.length) % images.length;
+  slider.src = images[index];
+}
+</script>
+ 
+
+</body>
+</html>
